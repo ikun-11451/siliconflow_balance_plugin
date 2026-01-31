@@ -22,6 +22,7 @@ __plugin_meta__ = PluginMetadata(
     """,
     author="ikun两年半",
     version="1.0.0",
+    repository_url="https://github.com/ikun-11451/siliconflow_balance_plugin",
     license="AGPL",
     keywords=["siliconflow", "硅基流动", "余额", "API"],
     categories=["工具"],
