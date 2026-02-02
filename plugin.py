@@ -16,6 +16,7 @@ from src.plugin_system import (
 )
 from src.plugin_system.base.component_types import PermissionNodeField
 from src.plugin_system.base.config_types import ConfigField
+from src.plugin_system.utils.permission_decorators import require_permission
 
 logger = get_logger("SiliconFlowBalance")
 
@@ -33,6 +34,7 @@ class BalanceCommand(PlusCommand):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
+    @require_permission("plugins.siliconflow_balance_plugin.query_balance")
     async def execute(self, args: CommandArgs) -> tuple[bool, Optional[str], bool]:
         """
         执行查询余额命令
